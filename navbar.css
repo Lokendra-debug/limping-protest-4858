@@ -1,0 +1,94 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+body{
+position: relative;
+}
+
+
+.lok_navContainer{
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    height: 10vh;
+    justify-content: space-between;
+    align-content: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    font-family: 'Assistant', sans-serif;
+    font-family: 'Caveat', cursive;
+    font-family: 'EB Garamond', serif;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Kalam', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    font-family: 'Unbounded', cursive;
+    font-size: 13px;
+    font-weight: 600;
+    color:#282c3f;
+    position: fixed;
+} 
+
+.lok_navContainer a{
+text-decoration: none;
+color: #282c3f;
+}
+
+.lok_navInner1{
+display: flex;
+margin-left: 40px;
+align-items: center;
+gap: 20px;
+}
+
+.lok_navInner1>a>img{
+    width: 80px;
+}
+
+
+
+.lok_navInner2{
+    display: flex;
+    margin-right: 30px;
+    align-items: center;
+    gap: 20px;
+    }
+
+.lok_navInner2> div:nth-child(1){
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background-color: rgb(241, 240, 240);
+    padding: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    }
+.lok_navInner2> div:nth-child(1) input{
+        outline: 0px;
+        border: 0;
+        background-color: transparent;
+        color: teal;
+    }
+
+    .lok_navInner2> div:nth-child(2){
+        border: 2px solid rgb(214, 206, 206);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+.lok_navInner2> div:nth-child(3),.lok_navInner2> div:nth-child(4),.lok_navInner2> div:nth-child(5){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.lok_navInner2> div:nth-child(3)>i,.lok_navInner2> div:nth-child(4)>i,.lok_navInner2> div:nth-child(5)>i{
+    font-size: 18px;
+}
+
+.lok_navInner2> div:nth-child(3)>p,.lok_navInner2> div:nth-child(4)>p,.lok_navInner2> div:nth-child(5)>p{
+    font-size: 11px;
+}
