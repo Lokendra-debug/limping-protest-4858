@@ -1,0 +1,79 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 10px #ccc;
+  }
+  
+  .santhi-logo img {
+    width: 100;
+    height:80px ;
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin: 0 10px;
+  }
+  
+  a {
+    text-decoration:underline;
+    text-decoration-color:palevioletred;
+    color: #333;
+  }
+  
+  .santhi-search-box {
+    /* display: flex; */
+    width: 20%;
+    align-items: center;
+    margin-left: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+   
+  }
+  
+  input[type="text"] {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  button[type="submit"] {
+    border: none;
+    background-color: transparent;
+  }
+  
+  .santhi-small-images {
+    display: flex;
+    align-items: center;
+  }
+  
+  .santhi-small-images img {
+    width: 40px;
+    margin-right: 10px;
+  }
+  .santhi-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .santhi-dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .santhi-dropdown:hover .santhi-dropdown-content {
+    display: block;
+  }
+  
+  
