@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(245, 244, 244);
+  }
+
+
+/* nav bar starting */
+
+#Asim-nav{
+    height: 80px;
+    margin-bottom: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   
+  }
+
+  /* nav bar ending */
+
+ /* main section start */
+
+  main {
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* filter part starts */
+  #Asim-filter {
+    width: 23%;
+  }
+  #Asim-filter > div {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+  }
+  #Asim-filter > div > div {
+    display: flex;
+  }
+  #Asim-filter input[type="checkbox"] {
+    margin-right: 15px;
+  }
+  #Asim-price-filter input {
+    width: 45%;
+  }
+
+  /* filter parts end */
+
+  /* container starts */
+  #Asim-product-container {
+    width: 75%;
+    margin-bottom: 50px;
+  }
+  #Asim-product-container > div:nth-child(1) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px 20px;
+  }
+  #Asim-product-container > div:nth-child(1) > div {
+    background-color: white;
+    padding-inline: 2%;
+    padding-bottom: 5%;
+  }
+  #Asim-product-container img {
+    width: 100%;
+  }
+  button {
+    display: block;
+    margin-inline: auto;
+    margin-top: 10px;
+  }
+  
+  #Asim-product-container > div:nth-child(2) {
+    display: flex;
+    width: 200px;
+    margin-inline: auto;
+  }
+  #Asim-product-container > div:nth-child(2) button {
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+  }
+  /* container end */
