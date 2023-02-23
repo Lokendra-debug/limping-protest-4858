@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            width:100vw;
+            height:100vh;
+            background-color: aqua;
+            /* font-size:1.5rem; */
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            border:2px solid salmon;
+        }
+        .raghav-cont{
+            background-color: white;
+            max-width: 800px;
+            min-height: 500px;
+            display:flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding:0.5rem 1.5rem;
+        }
+        .raghav-left{
+            flex-basis: 50%;
+        }
+        .raghav-right{
+            flex-basis:50%;
+        }
+        form{
+            padding:1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="raghav-cont">
+
+            <div class="raghav-left"> 
+                <h1> Billing Address</h1>
+                <form>
+                    Full Name <input> </br></br>
+                    Email <input><br><br>
+                    Address <input><br><br>
+                    City <input><br><br>
+                    <div id="state-zip">
+                        <lable>
+                            State 
+                            <select>
+                                <option> Bihar</option>
+                                <option> Rajsthan</option>
+                                <option> Uttar Pradesh</option>
+                                <option>Telangana</option>
+                            </select>
+                        </lable>
+                        <label>
+                            Zip Code <input><br> <br>
+                        </label>
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="raghav-right">
+                <h1>Payment</h1>
+
+            </div>
+        </div> 
+    </header>
+    
+</body>
+</html>
