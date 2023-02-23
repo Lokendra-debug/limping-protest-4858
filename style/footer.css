@@ -16,37 +16,43 @@
 
 /* <style id="footer"> */
 /* footer */
+
+
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 .container {
-  max-width: 75%;
+  /* max-width: 75%; */
   margin: auto;
   font-family: "Poppins", sans-serif;
 }
+
 .row {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 ul {
   list-style: none;
 }
 
 .footer {
-  /* background-color: #24262b; */
+ 
   padding: 70px 0;
 
   background-color: #eee;
-  /* border: 1px solid black; */
+
 }
+
 .footer-col {
   width: 25%;
   padding: 0 15px;
-  /* border: 1px solid black; */
+
 }
 .footer-col h4 {
   font-size: 16px;
-  /* color: #ffffff; */
+ 
   text-transform: capitalize;
   margin-bottom: 20px;
   font-weight: 600;
@@ -65,7 +71,7 @@ ul {
   color: #777777;
   display: block;
   transition: all 0.3s ease;
-}
+} 
 .footer-col ul li a:hover {
   color: #000000;
   padding-left: 8px;
@@ -115,4 +121,3 @@ ul {
     width: 100%;
   }
 }
-/* </style> */
