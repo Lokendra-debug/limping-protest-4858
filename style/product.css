@@ -10,7 +10,7 @@
 
 /* nav bar starting */
 
-#Asim-nav{
+#asim-nav{
     height: 80px;
     margin-bottom: 50px;
     background-color: white;
@@ -33,42 +33,42 @@
   }
 
   /* filter part starts */
-  #Asim-filter {
+  #asim-filter {
     width: 23%;
   }
-  #Asim-filter > div {
+  #asim-filter > div {
     background-color: white;
     padding: 15px;
     margin-bottom: 10px;
   }
-  #Asim-filter > div > div {
+  #asim-filter > div > div {
     display: flex;
   }
-  #Asim-filter input[type="checkbox"] {
+  #asim-filter input[type="checkbox"] {
     margin-right: 15px;
   }
-  #Asim-price-filter input {
+  #asim-price-filter input {
     width: 45%;
   }
 
   /* filter parts end */
 
   /* container starts */
-  #Asim-product-container {
+  #asim-product-container {
     width: 75%;
     margin-bottom: 50px;
   }
-  #Asim-product-container > div:nth-child(1) {
+  #asim-product-container > div:nth-child(1) {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 15px 20px;
   }
-  #Asim-product-container > div:nth-child(1) > div {
+  #asim-product-container > div:nth-child(1) > div {
     background-color: white;
     padding-inline: 2%;
     padding-bottom: 5%;
   }
-  #Asim-product-container img {
+  #asim-product-container img {
     width: 100%;
   }
   button {
@@ -77,12 +77,12 @@
     margin-top: 10px;
   }
   
-  #Asim-product-container > div:nth-child(2) {
+  #asim-product-container > div:nth-child(2) {
     display: flex;
     width: 200px;
     margin-inline: auto;
   }
-  #Asim-product-container > div:nth-child(2) button {
+  #asim-product-container > div:nth-child(2) button {
     font-size: 30px;
     width: 40px;
     height: 40px;
