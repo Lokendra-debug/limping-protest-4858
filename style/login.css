@@ -1,0 +1,84 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+.lok_login_Container{
+    width: 28vw;
+    height: 70vh;
+    margin: auto;
+    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-family: 'Assistant', sans-serif;
+    font-family: 'Caveat', cursive;
+    font-family: 'EB Garamond', serif;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Kalam', cursive;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    font-family: 'Unbounded', cursive;
+}
+.lok_login_Container>img{
+    width: 100%; 
+}
+.lok_login_Container>div{
+    width: 100%; 
+}
+
+.lok_login_Container>div>div{
+    display: flex;
+    padding: 30px 30px 30px 30px ;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.lok_login_Container>div>div>div{
+    display: flex;
+    align-content: center;
+    padding: 10px;
+    gap: 10px;
+    border: 1px solid rgb(197, 194, 194);
+}
+
+.lok_login_Container>div>div>div>input{
+    border: 0px;
+    outline: 0px;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.lok_login_Container>div>div p:nth-child(3){
+    font-size: 8px;
+}
+
+.lok_login_Container>div>div p:nth-child(5){
+    font-size: 10px;
+}
+.lok_login_Container>div>div button:nth-child(4){
+    padding: 10px;
+    color: white;
+    background-color: #ff3f63;
+    outline: 0px;
+    border: 0px;
+}
+
+.lok_login_Container>div>div button:nth-child(4):hover{
+    
+    background-color: #e70d35;
+    
+}
+
+.pincolor{
+    columns:  #ff3f63;
+}
+

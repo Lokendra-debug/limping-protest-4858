@@ -29,6 +29,7 @@ position: relative;
     font-weight: 600;
     color:#282c3f;
     position: fixed;
+    top: 0px;
 } 
 
 .lok_navContainer a{
@@ -58,6 +59,7 @@ gap: 20px;
 
 .lok_navInner2> div:nth-child(1){
     display: flex;
+    width: 300px;
     gap: 20px;
     align-items: center;
     background-color: rgb(241, 240, 240);
