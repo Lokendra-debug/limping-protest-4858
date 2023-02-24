@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignIn page</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="./signin.css">
 </head>
 <body>
-    
+    <div class="santhi-card">
+        <h4>Welcome</h4>
+        <p>To access account and meassage orders</p>
+        <button id="login">LOGIN/SIGNUP</button>
+        <hr>
+        <p>Orders</p>
+        <p>Watchlist</p>
+        <p>Gift Cards</p>
+        <p>Contact Us</p>
+        <div class="santhi-cardin">
+            <p>Myntra Insider</p>
+            <p>New</p>
+        </div>
+        <hr>
+        <p>Myntra Credit</p>
+        <p>Coupons</p>
+        <p>Saved Cards</p>
+        <p>Saved VPA</p>
+        <p>Saved Addresses</p>
+
+    </div>
 </body>
+<script>
+  let login=document.getElementById("login");
+  login.addEventListener("click",()=>{
+    window.location.href="./login.html";
+  })
+</script>
 </html>
