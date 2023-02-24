@@ -45,19 +45,16 @@
    font-size: 12px;
 }
 
-.userInput{
-   display: grid;
-   grid-template-columns: repeat(4,1fr);
-   gap: 5px;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-.userInput>input{
-    height: 35px;
-    width: 50%;
-    border: 1px solid rgb(207, 199, 199)
-    border-radius: 5px;
-    text-align: center;
-    font-size: 1.1rem;
+.loki_otplogin_container>input:nth-child(3){
+border: 1px solid rgb(238, 227, 227);
+padding: 10px;
+outline: 0px;
 }
 
 .loki_otplogin_container>p:nth-child(4){
