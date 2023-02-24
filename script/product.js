@@ -5,15 +5,9 @@ const renderSimpleCard = (params = [], parent, callback = () => {}) => {
     const image = document.createElement("img");
     image.src = data.image;
 
-    let anchor=document.createElement("a")
-    // anchor.href="http://127.0.0.1:5500/details.html"
-    
-  anchor.addEventListener("click",()=>{
-    return  anchor.href="http://127.0.0.1:5500/details.html"
-  })
  
     const title = document.createElement("h4");
-    title.innerText = data.title;
+    title.innerText = `${data.description}`;
 
     const brand = document.createElement("p");
     brand.innerText = data.brand;
@@ -22,12 +16,16 @@ const renderSimpleCard = (params = [], parent, callback = () => {}) => {
     category.innerText = data.category;
 
     const price = document.createElement("p");
-    price.innerText = data.price;
+    price.innerText = `Rs ${data.price}`;
+
      
-     anchor.append(image)
+    
+
+     const rating=document.createElement("p")
+     rating.textContent=`${data.rating} ☆`
 
     let extraEl = callback(data, index);
-    card.append(anchor, title, brand, category, price);
+    card.append(image,  brand, category,title,rating,price);
     extraEl?.forEach((el) => {
       card.append(el);
     });
@@ -37,7 +35,7 @@ const renderSimpleCard = (params = [], parent, callback = () => {}) => {
 
 const filters = {
   brand: {},
-  category: {},
+  gender: {},
 };
 const brandCheckboxes = document.querySelectorAll(
   "#asim-brand-filter input[type='checkbox']"
@@ -60,20 +58,25 @@ class RenderProducts {
   #render(params = []) {
     this.parent.innerHTML = null;
     renderSimpleCard(params, this.parent, (data) => {
-      const addToCart = document.createElement("button");
-      addToCart.innerText = "Add To Cart";
-      addToCart.addEventListener("click", () => {
-        for (let i = 0; i < this.LSData.length; i++) {
-          if (this.LSData[i].id === data.id) {
-                  return alert("Product already in the cart");
-          }
-        }
-        this.LSData.push({ id: data.id, quantity: 1 });
+      const ViewMore = document.createElement("button");
+      ViewMore.innerText = "View More >";
+      ViewMore.addEventListener("click", () => {
+        // for (let i = 0; i < this.LSData.length; i++) {
+        //   if (this.LSData[i].id === data.id) {
+        //           return alert("Product already in the cart");
+        //   }
+        // }
+        this.LSData=({ id: data.id, quantity: 1,category:data.category,price: data.price,brand:data.brand,image:data.image,description:data.description });
         localStorage.setItem(this.LSKey, JSON.stringify(this.LSData));
-        alert("Product added to The cart");
-      });
 
-      return [addToCart];
+       
+
+      });
+      ViewMore.addEventListener("click",()=>{
+        window.location.href="http://127.0.0.1:5500/details.html"
+      })
+       
+      return [ViewMore];
     });
   }
 
@@ -100,9 +103,9 @@ class RenderProducts {
     }
 // If none of the categories are checked assume no filter has been applied
 
-    if (this.#haveFilterBeenApplied("category")) {
+    if (this.#haveFilterBeenApplied("gender")) {
       filtered = filtered.filter((el) => {
-        return this.state.filters.category[el.category] === true;
+        return this.state.filters.gender[el.gender] === true;
       });
     }
     this.#render(filtered);
@@ -116,16 +119,21 @@ class RenderProducts {
   }
 }
 
-const Products = new RenderProducts(filters,"asim-product-container","cart",[] );
+const Products = new RenderProducts(filters,"asim-product-container","detail",[] );
 
-fetch(`https://63f70f9de40e087c9586b6a6.mockapi.io/products`)
-  .then((res) => res.json())
+
+
+  fetch(`https://63f70f9de40e087c9586b6a6.mockapi.io/products`).then((res)=>{
+    // let totalcount=res.headers.get("X-Total-Count");
+    // console.log("totalcount",totalcount)
+    return res.json()
+  })
   .then((data) => {
     console.log(data)
     Products.setState((el) => {
       return {
         ...el,
-        fetchedData: data.data,
+        fetchedData: data,
       };
     });
   });
@@ -141,10 +149,10 @@ brandCheckboxes.forEach((element) => {
 });
 
 categoryCheckboxes.forEach((element) => {
-  filters.category[element.id] = element.checked;
+  filters.gender[element.id] = element.checked;
   element.addEventListener("change", (e) => {
     Products.setState((state) => {
-      state.filters.category[e.target.id] = e.target.checked;
+      state.filters.gender[e.target.id] = e.target.checked;
       return state;
     });
   });
