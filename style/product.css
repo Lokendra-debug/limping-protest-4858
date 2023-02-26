@@ -116,3 +116,25 @@
     height: 40px;
   }
   /* container end */
+  @media screen and (max-width:680px) {
+    #asim-product-container > div:nth-child(1) {
+      display: grid;
+      grid-template-columns: repeat(1, 220px);
+      gap: 25px;
+     
+    }
+   
+  }
+
+ 
+  @media screen and (max-width:380px) {
+    #asim-product-container > div:nth-child(1) {
+      display: grid;
+      grid-template-columns: repeat(1, 220px);
+      gap: 25px;
+     
+    }
+    #asim-filter{
+      display: none;
+    }
+  }

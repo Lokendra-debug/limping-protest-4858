@@ -1,3 +1,4 @@
+
 // let Currentuser=document.querySelector("#l-navbar-black");
 let currentuser=JSON.parse(localStorage.getItem("currentuser"))
 // if(currentuser !==null){
@@ -109,6 +110,5 @@ addtocart.addEventListener("click",(event)=>{
 })
 divright.append(title,rating,description,category,price,addtocart)
 tbody.append(divright)
-
 
 
