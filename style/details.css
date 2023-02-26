@@ -1,29 +1,24 @@
 *{
-
     padding: 0px;
     margin: 0px;
     
    
 }
 
-body{
-    
-}
+
 
 #product-description{
-    
     font-family: 'Caveat', cursive;
     font-family: 'Poppins', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-family: 'Unbounded', cursive;
     width: 60%;
     margin: auto;
-    margin-top: 120px;
+    margin-top: 80px;
     margin-bottom: 20px;
     border-radius: 15px;
     padding: 30px;
-    height: 75vh;
-    
+    height: 60vh;
     display: grid;
     grid-template-columns: 3fr 3fr;
     gap: 40px;
@@ -57,7 +52,4 @@ body{
     border-radius: 10px;
 }
 
-#l-navbar-black{
-    position: relative;
-}
 
