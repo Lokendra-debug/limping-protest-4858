@@ -1,125 +1,114 @@
-let ViewData=[];
-ViewData.push(JSON.parse(localStorage.getItem("detail")));
-console.log(ViewData);
+
+// let Currentuser=document.querySelector("#l-navbar-black");
+let currentuser=JSON.parse(localStorage.getItem("currentuser"))
+// if(currentuser !==null){
+//     Currentuser.innerText=currentuser.name;
+//     let signinpop=document.querySelector("#signinpop");
+//     signinpop.style.display="none"
+//     jadu.innerText="Log out"
+// }else{
+//     Currentuser.innerText="Hello User"
+//     let signinpop=document.querySelector("#signinpop");
+//     signinpop.style.display="inline"
+// }
+
+// jadu.addEventListener("click",(event)=>{
+//     localStorage.removeItem("currentuser")
+//     window.location.href="index.html"
+// })
+
+// let searchinput=document.querySelector("#l-search-input");
+// searchinput.addEventListener("change",(event)=>{
+//     window.location.href="products.html";
+// })
+
+// let goaddtocartpage=document.querySelector(".goaddtocartpage");
+// console.log(goaddtocartpage)
+// goaddtocartpage.addEventListener("click",(event)=>{
+//     window.location.href="addtocart.html"
+// })
+
+let currentproduct=JSON.parse(localStorage.getItem("detail"))
+let tbody=document.querySelector("#product-description");
+
+let divleft=document.createElement("div");
+divleft.className="divleft";
+let image=document.createElement("img");
+image.src=currentproduct.image;
+divleft.append(image);
+tbody.append(divleft)
+
+let divright=document.createElement("div");
+divright.className="divright";
+let title=document.createElement("p");
+let rating=document.createElement("p");
+let description=document.createElement("p");
+let category=document.createElement("p");
+let price=document.createElement("p");
+let addtocart=document.createElement("button");
+addtocart.className="addtocart";
+
+title.innerText=`Brand: ${currentproduct.brand}`;
+rating.innerText=`Rating: ${currentproduct.rating} ⭐`;
+description.innerText=`Description: ${currentproduct.description}`;
+category.innerText=`Category: ${currentproduct.category}`;
+price.innerHTML=`Price: ${currentproduct.price}`;
+addtocart.innerText="Add to cart";
 
 
 
+addtocart.addEventListener("click",(event)=>{
 
+    if(currentuser !==null){
+            xyz();
+            async function xyz(){
+                try {
+                    let data=await fetch(`https://63f70f9de40e087c9586b6a6.mockapi.io/users?search=${currentuser.phoneNumber}`);
+                    let result=await data.json();
+                    let userlive=result[0];
+                    console.log(userlive)
+                    let datahaikya=userlive.cart.filter((ele,index)=>{
+                        return currentproduct.id ==ele.id;
+                    });
 
+                    if(datahaikya.length!== 0){
+                        alert("data is already add to cart")
+                        location.href="addtocart.html"
+                    }else{
+                        userlive.cart.push(currentproduct);
 
-
-let ProductImg=document.getElementById("asim-ProductImg")
-let smallImg=document.getElementsByClassName("asim-small-img")
-
-smallImg[0].onclick=()=>{
-    ProductImg.src=smallImg[0].src;
-}
-smallImg[1].onclick=()=>{
-    ProductImg.src=smallImg[1].src;
-}
-smallImg[2].onclick=()=>{
-    ProductImg.src=smallImg[2].src;
-}
-smallImg[3].onclick=()=>{
-    ProductImg.src=smallImg[3].src;
-}
-displayImg(ViewData)
-function displayImg(data){
-  
-    data.forEach((el)=>{
-        ProductImg.src=el.image;
-        
-        smallImg[0].src=el.image;
-        smallImg[1].src=el.image;
-        smallImg[2].src=el.image;
-        smallImg[3].src=el.image;
-    })
-}
-// let brand=document.querySelector("h3")
-// let category=document.querySelector("h1");
-// let price=document.querySelector("h4");
-// let desc=document.querySelector("p");
-
-
-
-
-let container=document.querySelector(".asimcontainer");
-
-
-let checkData=[];
-
-display(ViewData)
-function display(data){
-    container.innerHTML="";
-
-    data.forEach((ele) => {
-        
-        let card=document.createElement("div");
-        card.setAttribute("class","asim-card")
-        
-        let brand=document.createElement("h1")
-        let desc=document.createElement("p");
-        let category=document.createElement("h3");
-        let price=document.createElement("h4");
-     let tag=document.createElement("div");
-     tag.setAttribute("class","asim-tag")
-     let select=document.createElement("h4")
-       let add=document.createElement("button");
-       let rating=document.createElement("button");
-       let wish=document.createElement("button");
-       let addsec=document.createElement("div")
-       addsec.setAttribute("class","asim-addsec")
-
-       let hrTag=document.createElement("hr");
-
-
-     let arr=["XXL","XL","LARGE","MEDIUM","SMALL"]
-
-       for(let i=0;i<arr.length;i++){
-        let option=document.createElement("button");
-        option.value=arr[i];
-        option.textContent=arr[i];
-        tag.append(option);
-       }
-       select.textContent="Select Size  >>"
-       rating.textContent=`${ele.rating} ☆ 22.5K Ratings`
-       rating.setAttribute("class","asim-rating")
-        desc.textContent=ele.description;
-        category.textContent=ele.category;
-        price.textContent=`Rs ${ele.price}`;
-        brand.textContent=ele.brand;
-        add.textContent="🔒 ADD TO BAG";
-      wish.textContent="❤ WISHLIST"
-        add.addEventListener("click",()=>{
-      
-       if(dublicate(ele)){
-        alert("Product already Present");
-    }
-    else{
-        alert("Product added");
-        
-
-            checkData.push((JSON.parse(localStorage.getItem("detail"))))
-            
-            localStorage.setItem("cart",JSON.stringify(checkData));
-             
-        
-        
-    }
-})
-      addsec.append(add,wish);
-
-        card.append(brand,category,rating,desc,price,select,tag,addsec);
-        container.append(card,hrTag);
-
-    });
-
-    function dublicate(ele){
-        for(let i=0;i<checkData.length;i++){
-            if(checkData[i].id===ele.id){
-                return true;
+                        fetch(`https://63f70f9de40e087c9586b6a6.mockapi.io/users/${userlive.id}`, {
+                        method: 'PUT', 
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify(userlive),
+                        })
+                        .then((response) => response.json())
+                        .then((data) => {
+                            console.log('Success:', data);
+                        })
+                        .catch((error) => {
+                            console.error('Error:', error);
+                        });
+                        alert("you are successfully add to cart");
+                        location.href="checkout.html"
+                        
+                    }
+                    
+                } catch (error) {
+                    console.log("something wronge in fetch a wala ")
+                    
+                }
             }
-        }
-        return false;
-}
-}
+
+       
+    }else{
+        alert("You are not Login");
+    }
+
+})
+divright.append(title,rating,description,category,price,addtocart)
+tbody.append(divright)
+
+

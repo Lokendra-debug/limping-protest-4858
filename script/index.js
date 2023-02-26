@@ -1029,9 +1029,24 @@ const Home = [
   
   
   
-  
-  
-  
+  let nagrajhai=document.querySelector(".nagrajhai")
+  let welcome=document.querySelector(".welcome")
+  let currentuser=JSON.parse(localStorage.getItem("currentuser"));
+  if(currentuser){
+    nagrajhai.innerText="Logout"
+    welcome.innerText=`${currentuser.name}`
+  }
+
+  nagrajhai.addEventListener("click",(event)=>{
+    event.preventDefault();
+    if(nagrajhai.innerText=="LOGIN / SIGNUP"){
+      window.location.href="login.html"
+    }else if(nagrajhai.innerText=="Logout"){
+      localStorage.removeItem("currentuser");
+      window.location.href="index.html"
+
+    }
+  })
   
   
   
