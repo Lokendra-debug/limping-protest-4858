@@ -1,113 +1,139 @@
 *{
-    margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-body{
-    font-family: sans-serif;
-}
-#asim-tag{
- 
-   padding-left: 10px;
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: small;
-}
-
-.asim-small-container{
-    max-width: 700px;
-    margin: auto;
-    padding-left: 25px;
-    padding-right: 20px;
-
+    margin: 0;
 
 }
 
-#asim-ProductImg{
-    cursor: pointer;
-}
 .asim-row{
-    display: flex;
-    align-items: centre;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    /* border: 2px red solid; */
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   gap: 35px;
+   margin-top: 30px;
+  
 }
-.single-product{
-     margin-top: 40px;
+.asim-mainImg{
+    height: 280px;
+    margin-bottom:20px ;
+    /* border: 2px red solid; */
+   padding-left: 50px;
 }
-.asim-small-img-row{
-    display: flex;
-    justify-content: space-around;
+.asim-sImg{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-left: 10px;
 }
-.asim-col-2 img{
-    max-width: 50%;
-    padding: 20px 0;
-    
-}
-.asim-img-col{
-    flex-basis: 24%;
-    cursor: zoom-in;
 
+.asim-mainImg{
+    margin-left: 40px;
 }
-.asim-single-product .asim-col-2 img{
-    padding:0;
-
+.asimcontainer{
+       /* border: 2px red solid;d */
+       /* padding: 10px; */
+       font-family: 'Black Ops One', cursive;
+font-family: 'Gravitas One', cursive;
+font-family: 'IBM Plex Sans', sans-serif;
 }
-.asim-single-product .asim-col-2{
+.asim-card{
+    /* border: 2px solid red; */
     padding: 20px;
 }
-.asim-col-2{
-    flex-basis: 50%;
-   min-width: 300px;
+.asim-addsec{
+    /* border: 2px solid red; */
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   gap: 10px;
+   margin-top: 10px;
 }
-.col-2 h1{
-    font-size: 50px;
-    line-height: 60px;
-    margin: 25px 0;  
+.asim-addsec button{
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    color: blue;
+    height: 30px;
 }
-.asim-single-product select{
-    display: block;
-    padding: 10px;
-    margin-top: 20px;
+button{
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+.asim-tag{
+    /* border: 2px solid red; */
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 10px;
+    height: 20px;
+    margin-top: 10px;
+}
+.asim-tag button{
+    border-radius: 50%;
+    font-size: 8px;
+    color: red;
+    font-weight: bold;
+    
+}
+.asim-rating{
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(173, 241, 173);
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+h4{
+    margin: 10px 0 10px 0;
+    font-size: 14px;
+    font-weight: bold;
+    
+}
+
+@media screen and (max-width:700px) {
+    .asim-row{
+        /* border: 2px red solid; */
+       display: grid;
+       grid-template-columns: repeat(1,1fr);
+       gap: 35px;
+       margin-top: 30px;
+      
+    }
+}
+@media screen and (max-width:330px){
+    .asim-sImg{
+        display: none;
+        
+    }
+}
+.allP{
+   margin-top: 10px;
+   margin-bottom: 10px;
+    
+}
+#uni{
+    margin-left: 8px;
+}
+.fa {
+    margin: 10px;
+}
+.belowLine{
+    /* border: 2px solid red; */
+    padding-left:10px ;
+    margin-bottom: 20px;
+    font-family: 'Black Ops One', cursive;
+    font-family: 'Gravitas One', cursive;
+    font-family: 'IBM Plex Sans', sans-serif;
 
 }
-.asim-single-product h4{
-    margin: 20px 0;
-    font-size: 22px;
-    font-weight: bold;
+.fa-car{
+    background-color: whitesmoke;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
 }
-.asim-single-product input{
-    width: 50px;
-    height: 40px;
-    padding-left: 10px;
-    font-size: 20px;
-    margin-right: 10px;
-    border: 1px solid #ff523b;
-}
-input:focus{
-    outline: none;
-}
-a{
-    text-decoration: none;
-    color: #555;
-}
-.asim-single-product .fa{
-    color: #ff523b;
-    margin-left:10px;
-}
-p{
-    color: #555;
+#some{
+    padding-left: 50px;
 }
 .btn{
-    display: inline-block;
-    background: #ff523b;
-    color: #fff;
-    padding: 8px 30px;
-    margin: 30px 0;
-    border-radius: 30px;
-    transition: 0.5s;
-}
-.btn:hover{
-    background: #563434;
-    
+    border: ;
 }

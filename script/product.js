@@ -24,6 +24,14 @@ const renderSimpleCard = (params = [], parent, callback = () => {}) => {
      const rating=document.createElement("p")
      rating.textContent=`${data.rating} ☆`
 
+     let addToCart=document.createElement("button");
+     addToCart.textContent="🔒 ADD TO BAG"
+     addToCart.addEventListener("click",()=>{
+      let newData=[];
+      newData.push(data)
+            localStorage.setItem("cart1",JSON.stringify(newData));
+     })
+
     let extraEl = callback(data, index);
     card.append(image,  brand, category,title,rating,price);
     extraEl?.forEach((el) => {
@@ -66,7 +74,7 @@ class RenderProducts {
         //           return alert("Product already in the cart");
         //   }
         // }
-        this.LSData=({ id: data.id, quantity: 1,category:data.category,price: data.price,brand:data.brand,image:data.image,description:data.description });
+        this.LSData=({ id: data.id, quantity: 1,category:data.category,price: data.price,brand:data.brand,image:data.image,description:data.description,rating:data.rating });
         localStorage.setItem(this.LSKey, JSON.stringify(this.LSData));
 
        
@@ -74,7 +82,9 @@ class RenderProducts {
       });
       ViewMore.addEventListener("click",()=>{
         window.location.href="http://127.0.0.1:5500/details.html"
+        
       })
+      
        
       return [ViewMore];
     });
