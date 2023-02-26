@@ -21,34 +21,47 @@
     margin-inline: auto;
     display: flex;
     justify-content: space-between;
+
+    font-family: 'Black Ops One', cursive;
+    font-family: 'Gravitas One', cursive;
+    font-family: 'IBM Plex Sans', sans-serif; 
     
   }
 
   /* filter part starts */
   #asim-filter {
-    width: 23%;
+    width: 30%;
     height: 600px;
-    font: 10px;
+    
+    /* border: 2px solid red; */
+   
   }
   #asim-filter > div {
     background-color: rgb(220, 219, 231);
-    padding: 15px;
-    margin-bottom: 10px;
+    padding: 25px;
+    margin-bottom: 20px;
     font-family: 'Black Ops One', cursive;
     font-family: 'Gravitas One', cursive;
     font-family: 'IBM Plex Sans', sans-serif;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    font-size: 10px;
+    font-size: 14px;
+    
+    
   }
   #asim-filter > div > div {
     display: flex;
+    gap: 20px;
+    /* border: 2px solid red; */
+    margin: 20px;
+    font-size: 18px;
    
   }
   #asim-filter input[type="checkbox"] {
     margin-right: 15px;
+    width: 20px;
   }
   #asim-price-filter input {
-    width: 25%;
+    width: 40%;
     
   }
 
@@ -66,12 +79,13 @@
     font-family: 'Black Ops One', cursive;
     font-family: 'Gravitas One', cursive;
     font-family: 'IBM Plex Sans', sans-serif; 
-    font-size: 10px;
+    font-size: 12px;
+    padding: 5px;
     
   }
   #asim-product-container > div:nth-child(1) {
     display: grid;
-    grid-template-columns: repeat(3, 220px);
+    grid-template-columns: repeat(4, 220px);
     gap: 25px;
    
   }
@@ -94,12 +108,13 @@
     height: 60%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     padding-right: 10px;
+    margin-bottom: 30px;
   }
   button {
     display: block;
     margin-inline: auto;
     margin-top: 10px;
-    font-size: 10px;
+    font-size: 12px;
     
     
   }
@@ -116,16 +131,20 @@
     height: 40px;
   }
   /* container end */
-  @media screen and (max-width:680px) {
+  @media screen and (max-width:1100px) {
     #asim-product-container > div:nth-child(1) {
       display: grid;
-      grid-template-columns: repeat(1, 220px);
+      grid-template-columns: repeat(2, 220px);
       gap: 25px;
      
     }
    
   }
-
+  @media screen and (max-width:700px){
+    #asim-filter{
+      display: none;
+    }
+  }
  
   @media screen and (max-width:380px) {
     #asim-product-container > div:nth-child(1) {
