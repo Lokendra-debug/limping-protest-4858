@@ -10,22 +10,13 @@
 
 /* nav bar starting */
 
-#asim-nav{
-    height: 80px;
-    margin-bottom: 50px;
-    background-color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-   
-  }
 
   /* nav bar ending */
 
  /* main section start */
 
   main {
+    margin-top: 110px;
     width: 90%;
     margin-inline: auto;
     display: flex;
